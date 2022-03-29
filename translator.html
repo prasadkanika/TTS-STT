@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body style='text-align:center;padding:190px;color:white;background-color:black'>
+
+<h1 style='text-align:center'>Language Translator </h1>
+
+
+
+<p>Select the language :</p>
+
+<p><div id="google_translate_element"></div></p>
+<br/>
+<p>Enter text to translate  :</p>
+
+<textarea type='text' id='sam'></textarea>
+<button onclick='get()' >Submit</button>
+<div id='content'></div>
+
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  const b=document.querySelector('button');
+ b.addEventListener('click',get);
+ function get(){
+ //const t=document.querySelector('input').value;
+ const t=document.querySelector('#sam').value;
+ const con=document.querySelector('#content');
+ con.innerHTML=t;
+ }
+</script>
+</body>
+</html>
