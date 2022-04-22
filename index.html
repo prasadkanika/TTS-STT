@@ -20,6 +20,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
 <style >
     .bgimg{background-image: url("cover.jpg");
+      #panel{display:none}
+#flip{cursor:pointer}
     </style>
 </head>
 <body>
@@ -33,7 +35,8 @@
             </div>
         </div>
     </nav>
-
+<h2 id='flip' class='heading'>STT</h2>
+          <div id='panel'>
 
     <div class='container-fluid p-3' id='courses'>
         <h2 class='heading ' style='background:lavender'>Speech To Text</h2><br/>
@@ -48,7 +51,7 @@
                     <img src="stt.jpg" class="mr-3 mt-3" style="width:400px">
                 </div>
         </div>
-    </div>
+    </div> </div>
 
     <div class='container-fluid p-3' id='cyber'>
         <h2 class='heading text-center border-bottom'>Text to Speech</h2>
@@ -95,5 +98,16 @@
             </div>
         </div>
     </footer>
+          <script>
+            $(document).ready(function(){
+$("#flip").click(function(){
+  $("#panel").slideToggle(1000);
+})
+$("#flip1").click(function(){
+  $("#panel1").slideToggle(1000);
+})
+;});
+
+            </script>
 </body>
 </html>
